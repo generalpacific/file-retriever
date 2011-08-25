@@ -1,0 +1,14 @@
+FileRetriever
+------------
+This is a Desktop Search Engine for Linux systems that crawls and indexes the files on the system, 
+allows boolean search queries and generates ranked results depending on relevance.
+
+Usage : 
+
+run : ./gui
+
+It opens a gui for the application.
+Click Index.
+This will index your home directory.
+Now, try searching the home directory by entering various queries.
+Try "and" "or" and "and not" operators in the queries.
