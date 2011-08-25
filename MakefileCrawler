@@ -1,0 +1,11 @@
+
+#Author	: Chaudhary Prashant
+#Desc	: Makefile for crawling.
+#License: GPLv3
+
+CC=gcc
+LFLAGS=-O0 -g -lm
+APPNAME=crawler
+
+$(APPNAME): crawler.c
+	$(CC) -o $(APPNAME) crawler.c $(LFLAGS)

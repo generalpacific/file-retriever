@@ -1,0 +1,11 @@
+
+#Author	: Chaudhary Prashant
+#Desc	: Makefile for creating index.
+#License: GPLv3
+
+CC=gcc
+LFLAGS=-O0 -g -lm
+APPNAME=index
+
+$(APPNAME): index.c index.h read.c read.h processwords.c stopwords.c term.c fileExtension.c
+	$(CC) -o $(APPNAME) index.c read.c processwords.c stopwords.c term.c fileExtension.c $(LFLAGS)

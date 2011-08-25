@@ -1,0 +1,17 @@
+
+#Author	: Chaudhary Prashant
+#Desc	: Makefile for searching.
+#License: GPLv3
+
+CC=gcc
+LFLAGS=`pkg-config --cflags --libs gtk+-2.0` -lm -O0 -g -fno-stack-protector
+APPNAME=gui
+
+#$(APPNAME): read.c search_main.c search.c processwords.c stack.c query.c boolean.c stopwords.c vectorspace.c gui.c
+#	$(CC) -o $(APPNAME) read.c search_main.c search.c processwords.c stack.c query.c  boolean.c stopwords.c vectorspace.c gui.c $(LFLAGS)
+
+#$(APPNAME): index.c index.h read.c read.h processwords.c stopwords.c term.c fileExtension.c gui.c
+#	$(CC) -o $(APPNAME) index.c read.c processwords.c stopwords.c term.c fileExtension.c gui.c $(LFLAGS)
+
+$(APPNAME): gui.c
+	$(CC) -o $(APPNAME)  gui.c $(LFLAGS)

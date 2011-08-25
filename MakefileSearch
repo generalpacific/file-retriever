@@ -1,0 +1,11 @@
+
+#Author	: Chaudhary Prashant
+#Desc	: Makefile for searching.
+#License: GPLv3
+
+CC=gcc
+LFLAGS=-fno-stack-protector -lm -g -O0
+APPNAME=search
+
+$(APPNAME): read.c search_main.c search.c processwords.c stack.c query.c boolean.c stopwords.c vectorspace.c
+	$(CC) -o $(APPNAME) read.c search_main.c search.c processwords.c stack.c query.c  boolean.c stopwords.c vectorspace.c $(LFLAGS)

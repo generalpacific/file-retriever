@@ -1,0 +1,54 @@
+Old Approach:
+
+Algorithm for creating the index.
+
+	- Read document names from files.txt.
+		documents always stored with absolute path.
+		The line number is the id for each document.
+
+	- Read each term from file.
+		Check whether it is a stop word. If ,yes, skip it.
+		If, no, add it to the struct suitably. (Additional task - apply stemming)
+		Update, df of the term.
+		Update the posting.
+
+	- Now, write all the terms, their df, NAME of the posting file to the terms.txt.
+		Create the file by name of NAME of posting file for each term and add the posting info.
+
+----------------------------------------------------------------------------------------------------
+
+New Approach :
+
+Algorithm for creating the index.
+
+	- Read document names from files.txt.
+		documents always stored with absolute path.
+		The line number is the id for each document.
+
+	- Read each term from file.
+		Check whether it is a stop word. If ,yes, skip it.
+		If, no, add it to the struct suitably. (Additional task - apply stemming)
+		Update, df of the term.
+		Update the posting.
+
+	- Now, write all the terms, their df, NAME of the posting file to the INDEX directory.
+		Index directory contains the folders for each alphabet.
+		Each alphabet directory contains files where the terms and its info are stored.
+	
+####################################################################################################
+
+Searching : 
+	Steps :
+		- read query
+		- process it by removing stopwords
+		- now separate all the operators and terms.
+		- put postings of terms on the stack.
+		- update the operators 2d array.
+
+		- Now pop two postings from the stack and operator from 2d array.
+		- apply the operator on the postings and push the result on the stack.
+		- Do this until the operator stack is finished.
+
+		- Now the stack contains the final result.
+
+
